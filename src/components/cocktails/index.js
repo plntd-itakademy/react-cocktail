@@ -38,8 +38,6 @@ function Cocktails() {
 
   return (
     <div className="cocktails">
-      <h2>Cocktails</h2>
-
       {isLoading ? (
         <p>Loading...</p>
       ) : cocktails ? (
@@ -47,8 +45,12 @@ function Cocktails() {
           {Object.keys(cocktails).map((letter) => (
             <>
               {cocktails[letter]?.length > 0 && (
-                <div key={letter} className="cocktails-section">
-                  <h3>Cocktails of letter "{letter}"</h3>
+                <div
+                  key={letter}
+                  id={`cocktails-${letter}`}
+                  className="cocktails-section"
+                >
+                  <h2>Cocktails starting by "{letter.toUpperCase()}"</h2>
                   <div className="cocktails-grid">
                     {cocktails[letter].map((cocktail, index) => (
                       <CocktailCard
@@ -65,9 +67,7 @@ function Cocktails() {
           ))}
         </>
       ) : (
-        isError && (
-          <p>Une erreur est survenue pendant la récupération des données.</p>
-        )
+        isError && <p>An error occured while fetching data.</p>
       )}
     </div>
   );

@@ -3,6 +3,10 @@
 
   .page {
     margin-left: 300px;
-    flex-grow: 1;
+    padding: 20px 40px;
+
+    h1 {
+      margin-bottom: 20px;
+    }
   }
 }

@@ -1,13 +1,11 @@
-$borderRadius: 5px;
+@import "../../common.scss";
 
 .cocktail-card {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-shadow: $boxShadow;
   text-decoration: none;
   color: inherit;
+  border-radius: $borderRadius;
   transition: 0.2s transform;
-
-  border-top-left-radius: $borderRadius;
-  border-top-right-radius: $borderRadius;
 
   display: flex;
   flex-direction: column;
@@ -17,11 +15,11 @@ $borderRadius: 5px;
     transform: translateY(-5px);
   }
 
-  .cocktail-card__content {
+  .cocktail-card-content {
     padding: 10px;
   }
 
-  .cocktail-card__thumbnail {
+  .cocktail-card-thumbnail {
     height: 200px;
     width: 100%;
 

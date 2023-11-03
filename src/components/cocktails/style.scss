@@ -1,6 +1,30 @@
+@import "../../common.scss";
+
 .cocktails {
   h2 {
     margin-bottom: 30px;
+  }
+
+  .filters {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 20px;
+
+    .select-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+
+      select {
+        width: 200px;
+        outline: none;
+        font-size: inherit;
+        font-family: inherit;
+        padding: 4px;
+        border-radius: $borderRadius;
+        cursor: pointer;
+      }
+    }
   }
 
   .cocktails-section {
@@ -14,7 +38,7 @@
 
     .cocktails-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       grid-gap: 30px;
     }
   }

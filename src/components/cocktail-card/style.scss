@@ -1,22 +1,19 @@
 @import "../../common.scss";
 
 .cocktail-card {
+  @include elevationEffect;
   box-shadow: $boxShadow;
   text-decoration: none;
   color: inherit;
   border-radius: $borderRadius;
-  transition: 0.2s transform;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  &:hover {
-    transform: translateY(-5px);
-  }
-
   .cocktail-card-content {
     padding: 10px;
+    font-weight: 500;
   }
 
   .cocktail-card-thumbnail {

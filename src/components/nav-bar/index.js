@@ -1,7 +1,10 @@
 import { NavLink } from "react-router-dom";
+import { useFavoritesContext } from "../../favorites-context";
 import "./style.scss";
 
 function NavBar() {
+  const { favoritesCount } = useFavoritesContext();
+
   return (
     <nav className="nav-bar">
       <ul>
@@ -9,7 +12,9 @@ function NavBar() {
           <NavLink to={"/"}>Home Page</NavLink>
         </li>
         <li>
-          <NavLink to={"/favorites"}>Favorites</NavLink>
+          <NavLink to={"/favorites"}>
+            Favorites <span className="badge">{favoritesCount}</span>
+          </NavLink>
         </li>
       </ul>
     </nav>

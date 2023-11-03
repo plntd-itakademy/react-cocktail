@@ -1,2 +1,16 @@
+// Variables
 $borderRadius: 6px;
 $boxShadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+// Colors
+$btnColor: rgb(238 238 238);
+$btnHoverColor: rgb(234 234 234);
+
+// Mixins
+@mixin elevationEffect {
+  transition: 0.2s transform;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}

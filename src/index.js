@@ -6,9 +6,9 @@ import ErrorPage from "./error-page";
 import Root from "./routes/root";
 import Home from "./routes/home";
 import Favorites from "./routes/favorites";
-
-import "./index.css";
 import Cocktail from "./routes/cocktail";
+import { FavoritesProvider } from "./favorites-context";
+import "./index.css";
 
 const router = createBrowserRouter([
   {
@@ -34,9 +34,9 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  <FavoritesProvider>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </FavoritesProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

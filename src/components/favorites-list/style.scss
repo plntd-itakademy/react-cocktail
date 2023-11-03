@@ -1,0 +1,43 @@
+@import "../../common.scss";
+
+.cocktail-elements {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+
+  .cocktail-element {
+    @include elevationEffect;
+    width: 100%;
+    height: 200px;
+    border-radius: $borderRadius;
+    box-shadow: $boxShadow;
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+
+    .thumbnail-wrapper {
+      width: 250px;
+      height: 100%;
+
+      img {
+        border-top-left-radius: $borderRadius;
+        border-bottom-left-radius: $borderRadius;
+
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .content {
+      padding: 14px 30px;
+      flex-grow: 1;
+
+      p {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+  }
+}
